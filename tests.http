@@ -12,29 +12,29 @@ Content-Type: application/json
 GET http://localhost:3000/products
 
 ### Visualizar produto
-GET http://localhost:3000/products/67871adfe6019bd9f598687c
+GET http://localhost:3000/products/:productId
 
 ### Adicionar um item ao carrinho
-POST http://localhost:3000/cart/6788514f1e3af3fafaa3a51a
+POST http://localhost:3000/cart/:userId
 Content-Type: application/json
 
 {
-  "productId": "67871adfe6019bd9f598687c",
+  "productId": "",
   "quantity": 1
 }
 
 ### Visualizar carrinho de usuário
-GET http://localhost:3000/cart/6788514f1e3af3fafaa3a51a
+GET http://localhost:3000/cart/:userId
 Content-Type: application/json
 
 
 ### Finalizar Compra
-POST http://localhost:3000/purchase/6788514f1e3af3fafaa3a51a
+POST http://localhost:3000/purchase/:userId
 Content-Type: application/json
 
 {
-  "userId": "63f5aef4e6e543001edb0a7e" 
+  "userId": "" 
 }
 
 ### Consultar Estatísticas de Compras
-GET http://localhost:3000/purchases/6788514f1e3af3fafaa3a51a/stats
+GET http://localhost:3000/purchases/:userId/stats
